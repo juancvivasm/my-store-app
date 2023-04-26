@@ -1,0 +1,10 @@
+<div class="product-container">
+    <img class="product-image" src="{{ product.url }}">
+    {{ product.name }}
+    <br>
+    {{ product.price }}
+    <br>
+    <select class="select-input" [(ngModel)]="product.quantity">
+        <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
+    </select>
+</div>
