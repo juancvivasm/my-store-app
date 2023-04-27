@@ -9,7 +9,7 @@ export class Product {
     constructor() {
       this.id = 1;
       this.name = '';
-      this.price = 0;
+      this.price = 1;
       this.url = '';
       this.description = '';
       this.quantity = 1;

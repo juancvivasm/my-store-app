@@ -6,7 +6,5 @@
     <br>
     {{ product.price }}
     <br>
-    <select class="select-input" [(ngModel)]="product.quantity">
-        <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
-    </select>
+    <app-create-cart-item [item]="product"></app-create-cart-item>
 </div>
