@@ -6,10 +6,15 @@ import * as data from '../../assets/data.json';
   providedIn: 'root'
 })
 export class ProductService {
+  products: Product[] = (data as any).default
 
   constructor() { }
 
   getProducts(): Product[] {
-    return (data as any).default;
+    return this.products;
+  }
+
+  getProduct(id: number): Product {
+    return this.products.find(p => p.id === id)!
   }
 }
