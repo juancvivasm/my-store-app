@@ -1,13 +1,21 @@
 <div class="cart-container">
     <div class="row" style="width: 80%;">
         <div class="column">
-            <app-cart-item class="row" *ngFor="let item of items" [item]="item" (changeItem)="changeItem($event)"></app-cart-item>
+            <app-cart-item class="row" *ngFor="let item of items" [item]="item"
+                (changeItem)="changeItem($event)"></app-cart-item>
             <div class="row">
                 <h1>Total: ${{ total }}</h1>
             </div>
         </div>
         <div class="column">
-
+            <ng-template [ngIf]="items.length" [ngIfElse]="empty">
+                <app-checkout (invoice)="checkout($event)"></app-checkout>
+            </ng-template>
+            <ng-template #empty>
+                <div class="empty-cart-message">
+                    <h1>Cart is empty.</h1>
+                </div>
+            </ng-template>
         </div>
     </div>
 </div>

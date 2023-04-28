@@ -12,3 +12,8 @@ img {
     flex-direction: row;
     margin-bottom: 20px;
 }
+
+.number-input {
+    width: 80px;
+    text-align: center;
+}

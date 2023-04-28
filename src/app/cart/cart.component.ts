@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartService } from '../services/cart.service';
+import { Cart } from '../models/Cart';
 
 @Component({
   selector: 'app-cart',
@@ -9,9 +10,6 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   items: Product[] = []
-  fullName: string = ''
-  address: string = ''
-  creditCardNumber: number = 0
   total: number = 0
 
   constructor(private cartService: CartService) { }
@@ -32,5 +30,9 @@ export class CartComponent implements OnInit {
 
     this.cartService.changeQuantity(item);
     this.total = this.cartService.getTotal()
+  }
+
+  checkout(order: Cart){
+    console.log(order)
   }
 }
