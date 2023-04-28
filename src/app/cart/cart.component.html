@@ -1,0 +1,13 @@
+<div class="cart-container">
+    <div class="row" style="width: 80%;">
+        <div class="column">
+            <app-cart-item class="row" *ngFor="let item of items" [item]="item" (changeItem)="changeItem($event)"></app-cart-item>
+            <div class="row">
+                <h1>Total: ${{ total }}</h1>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+</div>
