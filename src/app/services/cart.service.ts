@@ -66,4 +66,10 @@ export class CartService {
     return total;
   }
 
+  clearCart(): void {
+    this.cartDetails = [];
+    this.total = 0;
+    //return this.cartDetails;
+  }
+
 }
