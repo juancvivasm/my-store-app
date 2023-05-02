@@ -11,6 +11,10 @@ export class ProductService {
   constructor() { }
 
   getProducts(): Product[] {
+    for (let index = 0; index < this.products.length; index++) {
+      const product = this.products[index];
+      product["quantity"] = 1;
+    }
     return this.products;
   }
 
