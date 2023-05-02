@@ -1,20 +1,27 @@
 <div class="detail-container">
     <div class="row">
-        <div class="column">
-            <img class="img" src="{{product.url}}">
-        </div>
-        <div class="column">
-            <div class="detail-item">
-                <h1>{{product.name}}</h1>
-                <br>
-                {{product.price}}
-                <br>
-                {{product.description}}
-                <br>
-                <app-create-cart-item [item]="product"></app-create-cart-item>
-                <br>
-                <a class="back-link" routerLink="/">Back to product list</a>
+        <ng-template [ngIf]="product" [ngIfElse]="empty">
+            <div class="column">
+                <img class="img" src="{{ product.url }}">
             </div>
-        </div>
+            <div class="column">
+                <div class="detail-item">
+                    <h1>{{ product.name }}</h1>
+                    <br>
+                    {{ product.price }}
+                    <br>
+                    {{product.description}}
+                    <br>
+                    <app-create-cart-item [item]="product"></app-create-cart-item>
+                    <br>
+                    <a class="back-link" routerLink="/">Back to product list</a>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #empty>
+            <div class="column">
+                <h1>Product not available</h1>
+            </div>
+        </ng-template>
     </div>
 </div>

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductItemComponent } from './product-item.component';
+import { CreateCartItemComponent } from '../create-cart-item/create-cart-item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
@@ -8,7 +11,11 @@ describe('ProductItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductItemComponent ]
+      imports: [
+        FormsModule, 
+        ReactiveFormsModule, 
+        RouterTestingModule],
+      declarations: [ ProductItemComponent, CreateCartItemComponent]
     })
     .compileComponents();
 

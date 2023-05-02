@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../services/order.service';
 import { Cart } from '../models/Cart';
 
@@ -12,7 +12,6 @@ export class SuccessComponent implements OnInit {
   order?: Cart
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private orderService: OrderService
   ) {

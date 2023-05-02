@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckoutComponent } from './checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('CheckoutComponent', () => {
   let component: CheckoutComponent;
@@ -8,6 +9,7 @@ describe('CheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [FormsModule, ReactiveFormsModule],
       declarations: [ CheckoutComponent ]
     })
     .compileComponents();
