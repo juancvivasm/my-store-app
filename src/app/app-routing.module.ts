@@ -6,10 +6,11 @@ import { CartComponent } from './cart/cart.component';
 import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
-  { path: '', component: ProductListComponent},
+  { path: '', component: ProductListComponent },
   { path: 'detail/:id', component: ProductItemDetailComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'success/:id', component: SuccessComponent }
+  { path: 'success/:id', component: SuccessComponent },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
