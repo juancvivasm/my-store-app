@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { CreateCartItemComponent } from '../create-cart-item/create-cart-item.component';
@@ -13,6 +13,7 @@ describe('ProductListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        HttpClientModule,
         FormsModule,
         ReactiveFormsModule, 
         RouterTestingModule],

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { ProductItemDetailComponent } from './product-item-detail.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CreateCartItemComponent } from '../create-cart-item/create-cart-item.component';
@@ -13,6 +13,7 @@ describe('ProductItemDetailComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ 
         RouterTestingModule, 
+        HttpClientModule,
         FormsModule, 
         ReactiveFormsModule],
       declarations: [ ProductItemDetailComponent, CreateCartItemComponent ]

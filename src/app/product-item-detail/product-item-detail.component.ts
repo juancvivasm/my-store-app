@@ -29,7 +29,7 @@ export class ProductItemDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     //console.log(`ID: ${id}`)
     this.productService.getProduct(id).subscribe(res => {
-      if(res){
+      if (res) {
         res.quantity = 1
       }
       this.product = res
