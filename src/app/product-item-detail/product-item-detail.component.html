@@ -5,7 +5,7 @@
                 <img class="img" src="{{ product.url }}">
             </div>
             <div class="column">
-                <div class="detail-item">
+                <div class="detail-item" style="align-items: start;">
                     <h1>{{ product.name }}</h1>
                     <br>
                     {{ product.price }}
@@ -14,7 +14,7 @@
                     <br>
                     <app-create-cart-item [item]="product"></app-create-cart-item>
                     <br>
-                    <a class="back-link" routerLink="/">Back to product list</a>
+                    <a class="back-link" routerLink="/"><i class="bi bi-arrow-left"></i> Back to product list</a>
                 </div>
             </div>
         </ng-template>

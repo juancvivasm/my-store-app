@@ -1,5 +1,5 @@
 <div>
-    <select class="select-input" [(ngModel)]="item.quantity">
+    <select class="form-select select-input" [(ngModel)]="item.quantity">
         <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
     </select>
     <br>

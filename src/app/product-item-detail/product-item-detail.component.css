@@ -16,10 +16,6 @@ img {
     width: 320px;
 }
 
-.select-input {
-    width: 108px;
-    margin-bottom: 8px;
-}
 
 .detail-container {
     display: flex;
@@ -31,7 +27,7 @@ img {
 .detail-item {
     margin-left: 128px;
     margin-right: 128px;
-    text-align: justify;
+    text-align: start;
 }
 
 .back-link {

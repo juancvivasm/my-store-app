@@ -8,7 +8,7 @@
         {{ item.price }}
         <br>
         <div style="display: inline-flex;">
-            Amount: <input type="number" name="quantity" [(ngModel)]="item.quantity" 
+            Amount:&nbsp;<input type="number" class="form-control" name="quantity" [(ngModel)]="item.quantity" 
             class="number-input"
             (ngModelChange)="changeQuantity($event)">
         </div>
